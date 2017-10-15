@@ -1,13 +1,14 @@
 'use strict';
 
 describe('posts-view.component module', function() {
-    var elem, $scope;
+    var elem, $scope, $componentController;
 
     beforeEach(module('app.templates'));
     beforeEach(module('myApp.post-entry.component'));
     beforeEach(module('myApp.posts-view.component'));
 
-    beforeEach(inject(function($compile, $rootScope){
+    beforeEach(inject(function($compile, $rootScope, _$componentController_){
+        $componentController = _$componentController_;
         $scope = $rootScope.$new(true);
 
         $scope.posts = [
@@ -15,7 +16,9 @@ describe('posts-view.component module', function() {
             { title: 'title2', body: 'body2' }
         ];
 
-        var html = '<posts-view posts="posts"></posts-view>';
+        $scope.users = [];
+
+        var html = '<posts-view posts="posts" users="users"></posts-view>';
         elem = $compile(html)($scope);
         $scope.$digest();
     }));
@@ -24,4 +27,17 @@ describe('posts-view.component module', function() {
         expect($(elem).find('post-entry').length).toBe(2);
     });
 
+    it('should getAuthor correctly', function() {
+        var users = [
+            {id: 1, username: 'Author'},
+            {id: 2, username: 'name'}
+        ];
+
+        var post = {userId: 1};
+        var bindings = { post: post, users: users };
+
+        var ctrl = $componentController('postsView', null, bindings);
+        var author = ctrl.getAuthor(post);
+        expect(author.username).toBe('Author');
+    });
 });

@@ -6,6 +6,7 @@ angular.module('myApp.post', [
     'myApp.post.filters',
     'myApp.post-sort.component',
     'myApp.post-entry.component',
+    'myApp.post-group.component',
     'myApp.posts-view.component',
     'myApp.posts-sidebar.component',
     'myApp.user.services'
@@ -15,6 +16,7 @@ angular.module('myApp.post', [
     $routeProvider.when('/posts', {
 
         template: '<posts-view posts="$resolve.posts"' +
+                              'users="$resolve.users"' +
                               'on-post-sort="$rootCtrl.onPostSort"' +
                               'sort-value="$rootCtrl.sortValue"></posts-view>',
 

@@ -1,4 +1,10 @@
-<div ng-style="$ctrl.styles.entry">
-    <h1 ng-style="$ctrl.styles.title" class="post-title">{{$ctrl.post.title}}</h1>
-    <div ng-style="$ctrl.styles.body" class="post-body">{{$ctrl.post.body}}</div>
+<div class="card border-0 bg-light mb-3">
+    <div class="card-body">
+        <h4 ng-style="$ctrl.styles.title" class="post-title card-title">{{$ctrl.post.title}}</h4>
+        <p ng-style="$ctrl.styles.body" class="post-body card-text">{{$ctrl.post.body}}</p>
+
+        <div>
+            <span><span class="oi oi-person"></span>{{$ctrl.author.username}}</span>
+        </div>
+    </div>
 </div>
