@@ -11,7 +11,7 @@ describe('audio-entry.component module', function() {
         $scope = $rootScope.$new(true);
 
         $scope.audio = {
-            name: 'name',
+            title: 'name',
             url: 'http://url.com'
         };
 
@@ -21,7 +21,7 @@ describe('audio-entry.component module', function() {
     }));
 
     it('should render element correctly', function() {
-        expect($(elem).find('.audio-name').html()).toBe($scope.audio.name);
+        expect($(elem).find('.audio-name').html()).toBe($scope.audio.title);
         expect($(elem).find('audio-player').children().length).not.toBe(0);
     });
 

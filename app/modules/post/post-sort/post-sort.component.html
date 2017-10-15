@@ -1,0 +1,13 @@
+<div style="margin-bottom: 20px;">
+    <label for="post-sort-comp">Sort posts by...</label>
+
+    <select class="form-control"
+            id="post-sort-comp"
+            ng-model="$ctrl.sortValue"
+            ng-change="$ctrl.onSelectChange({sortValue: $ctrl.sortValue})">
+
+        <option selected></option>
+        <option value="title">Post title</option>
+
+    </select>
+</div>

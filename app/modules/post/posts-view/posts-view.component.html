@@ -1,0 +1,13 @@
+<div class="row flex-xl-nowrap">
+
+    <div class="col-12 col-md-3 col-xl-3 bg-light pt-3 pb-3">
+        <posts-sidebar on-post-sort="$ctrl.onPostSort(sortValue)" sort-value="$ctrl.sortValue"></posts-sidebar>
+    </div>
+
+    <div class="col-12 col-md-9 col-xl-9">
+        <div ng-repeat="post in $ctrl.posts | orderBy:$ctrl.sortValue">
+            <post-entry post="post"></post-entry>
+        </div>
+    </div>
+
+</div>

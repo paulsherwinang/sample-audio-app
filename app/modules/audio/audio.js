@@ -2,6 +2,7 @@
 
 angular.module('myApp.audio', [
     'ngRoute',
+    'myApp.audio.services',
     'myApp.audio-view.component',
     'myApp.audio-player.component',
     'myApp.audio-entry.component'
@@ -9,16 +10,14 @@ angular.module('myApp.audio', [
 
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/audio', {
-        template: '<audio-view files="$resolve.audioFiles"></audio-view>',
+        template: '<audio-view audios="$resolve.audioFiles"></audio-view>',
         resolve: {
-            audioFiles: function(audioData) {
-                return audioData;
+            audioFiles: function(Audio) {
+                return [
+                    new Audio('New Wave Drums', 'https://static.bandlab.com/soundbanks/previews/new-wave-kit.ogg'),
+                    new Audio('Organ Synth', 'https://static.bandlab.com/soundbanks/previews/synth-organ.ogg')
+                ];
             }
         }
     });
-}])
-
-.value('audioData', [
-    { title: 'New Wave Drums', url: 'https://static.bandlab.com/soundbanks/previews/new-wave-kit.ogg' },
-    { title: 'Organ Synth', url: 'https://static.bandlab.com/soundbanks/previews/synth-organ.ogg' }
-]);
+}]);

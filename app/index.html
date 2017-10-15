@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
+<body ng-controller="RootController as $rootCtrl">
 
     <header>
         <app-navbar></app-navbar>
@@ -26,7 +26,9 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-view></div>
+    <div class="container-fluid">
+        <div ng-view></div>
+    </div>
 
     <!-- In production use:
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -38,10 +40,18 @@
     <script src="modules/header/header.js"></script>
     <script src="modules/header/navbar-component/navbar.component.js"></script>
 
-    <script src="modules/posts/view1.js"></script>
-    <script src="modules/posts/Post.js"></script>
+    <script src="modules/user/user.services.js"></script>
+
+    <script src="modules/post/post.js"></script>
+    <script src="modules/post/post-services/post-services.js"></script>
+    <script src="modules/post/post-filters/post-filters.js"></script>
+    <script src="modules/post/post-entry/post-entry.component.js"></script>
+    <script src="modules/post/post-sort/post-sort.component.js"></script>
+    <script src="modules/post/posts-view/posts-view.component.js"></script>
+    <script src="modules/post/posts-sidebar/posts-sidebar.component.js"></script>
 
     <script src="modules/audio/audio.js"></script>
+    <script src="modules/audio/audio-services/audio-services.js"></script>
     <script src="modules/audio/audio-entry/audio-entry.component.js"></script>
     <script src="modules/audio/audio-view/audio-view.component.js"></script>
     <script src="modules/audio/audio-player/audio-player.component.js"></script>
