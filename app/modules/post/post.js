@@ -5,11 +5,8 @@ angular.module('myApp.post', [
     'myApp.post.services',
     'myApp.post.filters',
     'myApp.post-sort.component',
-    'myApp.post-entry.component',
     'myApp.post-group.component',
     'myApp.posts-view.component',
-    'myApp.posts-ungrouped-view.component',
-    'myApp.posts-grouped-view.component',
     'myApp.posts-sidebar.component',
     'myApp.user.services'
 ])

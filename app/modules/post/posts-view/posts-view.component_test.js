@@ -23,10 +23,6 @@ describe('posts-view.component module', function() {
         $scope.$digest();
     }));
 
-    it('should render element correctly', function() {
-        expect($(elem).find('post-entry').length).toBe(2);
-    });
-
     it('should getAuthor correctly', function() {
         var users = [
             {id: 1, username: 'Author'},

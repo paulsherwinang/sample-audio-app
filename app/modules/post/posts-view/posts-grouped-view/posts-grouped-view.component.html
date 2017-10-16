@@ -1,0 +1,6 @@
+<div class="post-group" ng-repeat="(key, group) in $ctrl.posts | groupBy:$ctrl.groupingValue track by key">
+    <h1>this is a group</h1>
+    <div ng-repeat="post in group | orderBy:$ctrl.sortValue track by post.id">
+        <post-entry post="post" author="$ctrl.getAuthor({post: post})"></post-entry>
+    </div>
+</div>

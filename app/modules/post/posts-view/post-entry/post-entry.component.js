@@ -1,6 +1,6 @@
 angular.module('myApp.post-entry.component', [])
     .component('postEntry', {
-        templateUrl: 'modules/post/post-entry/post-entry.component.html',
+        templateUrl: 'modules/post/posts-view/post-entry/post-entry.component.html',
         bindings: {
             post: '<',
             author: '<'

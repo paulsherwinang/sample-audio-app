@@ -2,7 +2,7 @@
 
 angular.module('myApp.post.filters', [])
     .filter('groupBy', function(){
-        return function(input, key) {
+        return _.memoize(function(input, key) {
             var o = {};
 
             input.forEach(function(user) {
@@ -14,5 +14,5 @@ angular.module('myApp.post.filters', [])
             });
 
             return o;
-        };
+        });
     });
