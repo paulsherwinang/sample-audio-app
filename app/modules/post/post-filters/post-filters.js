@@ -2,10 +2,10 @@
 
 angular.module('myApp.post.filters', [])
     .filter('groupBy', function(){
-        return function(users, key) {
+        return function(input, key) {
             var o = {};
 
-            users.forEach(function(user) {
+            input.forEach(function(user) {
                 if(!o[user[key]]){
                     o[user[key]] = [user];
                 } else {

@@ -1,0 +1,4 @@
+<div ng-if="!$ctrl.groupingValue" ng-repeat="post in $ctrl.posts | orderBy:$ctrl.sortValue">
+    <post-entry post="post"
+                author="$ctrl.getAuthor({post: post})"></post-entry>
+</div>

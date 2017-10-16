@@ -17,8 +17,13 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     var self = this;
 
     this.sortValue = '';
+    this.groupingValue = '';
 
     this.onPostSort = function(sortValue) {
         self.sortValue = sortValue;
+    };
+
+    this.onPostGroup = function(groupingValue) {
+        self.groupingValue = groupingValue;
     };
 });

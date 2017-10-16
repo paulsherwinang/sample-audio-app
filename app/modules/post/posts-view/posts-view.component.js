@@ -7,13 +7,15 @@ angular.module('myApp.posts-view.component', [])
         posts: '<',
         users: '<',
         onPostSort: '<',
-        sortValue: '<'
+        sortValue: '<',
+        onPostGroup: '<',
+        groupingValue: '<'
     },
     controller: function() {
         var self = this;
 
         this.getAuthor = function(post){
-            return this.users.find(function(user){
+            return self.users.find(function(user){
                 return user.id === post.userId;
             });
         };

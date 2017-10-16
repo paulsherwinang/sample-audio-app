@@ -17,7 +17,7 @@ describe('post-sort.component module', function() {
             sortValue: ''
         };
 
-        var ctrl = $componentController('postSortComponent', null, bindings);
+        var ctrl = $componentController('postSort', null, bindings);
         ctrl.sortValue = term;
         ctrl.onSelectChange({ sortValue: ctrl.sortValue });
         expect(ctrl.onSelectChange).toHaveBeenCalledWith({

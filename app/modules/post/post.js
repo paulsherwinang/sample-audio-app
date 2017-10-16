@@ -8,6 +8,8 @@ angular.module('myApp.post', [
     'myApp.post-entry.component',
     'myApp.post-group.component',
     'myApp.posts-view.component',
+    'myApp.posts-ungrouped-view.component',
+    'myApp.posts-grouped-view.component',
     'myApp.posts-sidebar.component',
     'myApp.user.services'
 ])
@@ -17,6 +19,8 @@ angular.module('myApp.post', [
 
         template: '<posts-view posts="$resolve.posts"' +
                               'users="$resolve.users"' +
+                              'on-post-group="$rootCtrl.onPostGroup"' +
+                              'grouping-value="$rootCtrl.groupingValue"' +
                               'on-post-sort="$rootCtrl.onPostSort"' +
                               'sort-value="$rootCtrl.sortValue"></posts-view>',
 

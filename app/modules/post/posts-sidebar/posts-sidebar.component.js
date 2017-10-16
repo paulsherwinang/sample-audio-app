@@ -5,6 +5,8 @@ angular.module('myApp.posts-sidebar.component', [])
     templateUrl: 'modules/post/posts-sidebar/posts-sidebar.component.html',
     bindings: {
         onPostSort: '&',
-        sortValue: '<'
+        sortValue: '<',
+        onPostGroup: '&',
+        groupingValue: '<'
     }
 });

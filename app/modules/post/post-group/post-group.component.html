@@ -1,0 +1,10 @@
+<label class="custom-control custom-checkbox">
+    <input type="checkbox"
+           ng-change="$ctrl.onInputChange({groupingValue: $ctrl.groupingValue})"
+           ng-model="$ctrl.groupingValue"
+           ng-true-value="'userId'"
+           ng-false-value="''"
+           class="custom-control-input">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Group posts by Author</span>
+</label>
