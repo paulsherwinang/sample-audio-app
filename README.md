@@ -1,4 +1,4 @@
-# sample-hotel-app
+# sample-audio-app
 
 ## Prerequisite
 1. node
