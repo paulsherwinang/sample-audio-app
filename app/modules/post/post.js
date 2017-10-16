@@ -4,10 +4,7 @@ angular.module('myApp.post', [
     'ngRoute',
     'myApp.post.services',
     'myApp.post.filters',
-    'myApp.post-sort.component',
-    'myApp.post-group.component',
     'myApp.posts-view.component',
-    'myApp.posts-sidebar.component',
     'myApp.user.services'
 ])
 
