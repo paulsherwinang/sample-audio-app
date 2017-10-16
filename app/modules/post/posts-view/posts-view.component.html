@@ -1,6 +1,7 @@
 <div class="row flex-xl-nowrap">
-
     <div class="col-12 col-md-3 col-xl-3 bg-light pt-3 pb-3">
+        <h1 class="mt-0">Posts</h1>
+
         <posts-sidebar on-post-sort="$ctrl.onPostSort(sortValue)"
                        sort-value="$ctrl.sortValue"
                        on-post-group="$ctrl.onPostGroup(groupingValue)"
@@ -8,6 +9,7 @@
     </div>
 
     <div class="col-12 col-md-9 col-xl-9 mt-3">
+
         <posts-ungrouped-view ng-if="!$ctrl.groupingValue"
                               posts="$ctrl.posts"
                               get-author="$ctrl.getAuthor(post)"
