@@ -15,6 +15,10 @@ angular.module('myApp.post-entry.component', [])
                 },
                 body: {
                     color: '#333333'
+                },
+                author: {
+                    fontSize: '13px',
+                    color: '#9e9e9e'
                 }
             };
         }
