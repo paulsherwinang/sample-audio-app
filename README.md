@@ -6,7 +6,7 @@
 3. git
 
 ```
-git clone https://github.com/paulsherwinang/sample-hotel-app.git
+git clone https://github.com/paulsherwinang/sample-audio-app.git
 npm install
 bower install
 ```
