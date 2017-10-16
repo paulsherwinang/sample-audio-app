@@ -4,8 +4,6 @@ angular.module('myApp.audio', [
     'ngRoute',
     'myApp.audio.services',
     'myApp.audio-view.component',
-    'myApp.audio-player.component',
-    'myApp.audio-entry.component'
 ])
 
 .config(['$routeProvider', function($routeProvider) {
